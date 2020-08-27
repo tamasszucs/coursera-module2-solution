@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.parent {
+    counter-reset: szucsi;
+}
+
+.child {
+    width: 45%;
+    height: 20px;
+    background-color: black;
+    color: white;
+    position: relative;
+    
+}
+
+
+
+.child::before {
+    counter-increment: szucsi;
+    content: counter(szucsi);
+    background-color: brown;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    right: -20;
+    height: 100%;
+    width: 20px;
+}
+
+.marginos {
+    width: 0;
+    height: 0;
+    display: block;
+    border: 50px solid orange;
+    border-left-width: 90px;
+    border-right-width: 90px;
+    border-bottom-width: 0px;
+    border-left-color: red;
+    border-right-color: orchid;
+    border-bottom-color: purple;
+}
